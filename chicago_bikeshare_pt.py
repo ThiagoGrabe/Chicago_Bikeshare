@@ -210,12 +210,12 @@ def user_type_count(data_list):
 	subscriber = 0
 	dependent = 0
     
-	for linha in data_list:
-		if linha[-3].lower() == "customer":
+	for line in data_list:
+		if line[-3].lower() == "customer":
 			customer += 1
-		elif linha[-3].lower() == "subscriber":
+		elif line[-3].lower() == "subscriber":
 			subscriber += 1
-		elif linha[-3].lower() == "dependent":
+		elif line[-3].lower() == "dependent":
 			dependent += 1
 
 	return [customer, subscriber, dependent]
@@ -257,22 +257,22 @@ mean_trip = 0.
 median_trip = 0.
 
 #Min and max evaluation
-for i in trip_duration_list:
-	i = float(i)
+for item in trip_duration_list:
+	item = float(item)
 	if min_trip == 0.:
-		min_trip = i
-	elif i < min_trip:
-		min_trip = i
+		min_trip = item
+	elif item < min_trip:
+		min_trip = item
 
 	if max_trip == 0.:
-		max_trip = i
-	elif i > max_trip:
-		max_trip = i
+		max_trip = item
+	elif item > max_trip:
+		max_trip = item
 
 #Mean
-for i in trip_duration_list:
-	i = float(i)
-	mean_trip += i
+for item in trip_duration_list:
+	item = float(item)
+	mean_trip += item
 
 mean_trip = mean_trip / len(trip_duration_list)
 
@@ -332,6 +332,13 @@ print("Você vai encarar o desafio? (yes ou no)")
 answer = "yes"
 
 def count_items(column_list):
+	"""
+	Função para contar tipos de usuários (gênero)
+	Arguments: 
+		column_list: coluna a ser avaliada
+	Return:
+		Tipos de usuários e quantidade por tipo
+	"""
 	item_types = []
 	count_items = []
 
