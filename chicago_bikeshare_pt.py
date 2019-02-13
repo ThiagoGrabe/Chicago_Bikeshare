@@ -55,15 +55,14 @@ input("Aperte Enter para continuar...")
 # TODO: Crie uma função para adicionar as colunas(features) de uma lista em outra lista, na mesma ordem
 
 def column_to_list(data, index):
-"""
+	"""
 	Função que adiciona as colunas (features) de uma lista em outra lista
 	Arguments:
 		data: DataFrame utilizado
 		index: Indice da coluna a ser utilizado
 	Return:
 		Lista de valores referentes á coluna
-"""
-	
+	"""
 	column_list = []
     # Dica: Você pode usar um for para iterar sobre as amostras, pegar a feature pelo seu índice, e dar append para uma lista
 	for lines in data:
@@ -113,13 +112,13 @@ input("Aperte Enter para continuar...")
 # Isso deveria retornar uma lista com [count_male, count_female] (exemplo: [10, 15] significa 10 Masculinos, 15 Femininos)
 
 def count_gender(data_list):
-"""
+	"""
 	Função para contar gêneros
 	Arguments:
 		data_list: DataFrame
 	Return:
 		Lista com os gêneros
-"""
+	"""
 
 	male = 0
 	female = 0
@@ -151,13 +150,13 @@ input("Aperte Enter para continuar...")
 # Esperamos ver "Male", "Female", ou "Equal" como resposta.
 
 def most_popular_gender(data_list):
-"""
+	"""
 	Função que contabiliza o gênero mais pupular
 	Arguments:
 		data_list: DataFrame utilizado
 	Return:
 		O gênero que mais aparece na lista.
-"""
+	"""
 
 	answer = ""
 
@@ -199,27 +198,27 @@ input("Aperte Enter para continuar...")
 print("\nTAREFA 7: Verifique o gráfico!")
 
 def user_type_count(data_list):
-"""
+	"""
 	Função para gerar um gráfico de 'customer', 'subscriber' e 'dependent'
 	Arguments: 
 		data_list: DataFrame utilizado
 	Return:
 		Gráfico contabilizando 'customer', 'subscriber', 'dependet'
-"""
+	"""
 
-    customer = 0
-    subscriber = 0
-    dependent = 0
+	customer = 0
+	subscriber = 0
+	dependent = 0
     
-    for linha in data_list:
-        if linha[-3].lower() == "customer":
-            customer += 1
-        elif linha[-3].lower() == "subscriber":
-            subscriber += 1
-        elif linha[-3].lower() == "dependent":
-            dependent += 1
-    
-    return [customer, subscriber, dependent]
+	for linha in data_list:
+		if linha[-3].lower() == "customer":
+			customer += 1
+		elif linha[-3].lower() == "subscriber":
+			subscriber += 1
+		elif linha[-3].lower() == "dependent":
+			dependent += 1
+
+	return [customer, subscriber, dependent]
 
 
 user_type_list = column_to_list(data_list, -3)
@@ -316,12 +315,12 @@ input("Aperte Enter para continuar...")
 # Volte e tenha certeza que você documentou suas funções. Explique os parâmetros de entrada, a saída, e o que a função faz. Exemplo:
 # def new_function(param1: int, param2: str) -> list:
 """
-      Função de exemplo com anotações.
-      Argumentos:
-          param1: O primeiro parâmetro.
-          param2: O segundo parâmetro.
-      Retorna:
-          Uma lista de valores x.
+  Função de exemplo com anotações.
+  Argumentos:
+      param1: O primeiro parâmetro.
+      param2: O segundo parâmetro.
+  Retorna:
+      Uma lista de valores x.
 
 """
 
